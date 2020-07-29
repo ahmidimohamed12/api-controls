@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="controlsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="codebar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="200" />
+    <Property Name="timecode" Type="datetime" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="50" />
+    <Property Name="prenom" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="passwords" Type="varchar" MaxLength="50" />
+    <Property Name="batteryinfo" Type="varchar" MaxLength="50" />
+    <Property Name="codebar" Type="varchar" MaxLength="200" />
+    <Property Name="timelogin" Type="datetime" />
+    <Property Name="timelogout" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="controlsModelStoreContainer">
+    <EntitySet Name="codebar" EntityType="Self.codebar" Schema="controls" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="controls" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

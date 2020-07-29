@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="controlsModelStoreContainer" CdmEntityContainer="controlsEntities">
+    <EntitySetMapping Name="codebars">
+      <EntityTypeMapping TypeName="controlsModel.codebar">
+        <MappingFragment StoreEntitySet="codebar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="timecode" ColumnName="timecode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="controlsModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="passwords" ColumnName="passwords" />
+          <ScalarProperty Name="batteryinfo" ColumnName="batteryinfo" />
+          <ScalarProperty Name="codebar" ColumnName="codebar" />
+          <ScalarProperty Name="timelogin" ColumnName="timelogin" />
+          <ScalarProperty Name="timelogout" ColumnName="timelogout" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
